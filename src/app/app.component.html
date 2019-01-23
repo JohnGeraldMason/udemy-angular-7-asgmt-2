@@ -1,0 +1,37 @@
+<label>Username:</label>
+<input type="text" 
+  class="form-control" 
+  [(ngModel)]="username">
+
+<p>{{ username }}</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="username === ''"
+  (click)="username = ''">Reset</button>
+
+<!-- my solution - not as elegent as course solution! -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Username:</label>
+      <input 
+        type="text"
+        class="form-control"  
+        [(ngModel)]="username"
+        (input)="onUpdateUserName($event)">
+    </div>
+
+    <div class="col-xs-12">
+      <p>{{ username }}</p>
+    </div>
+
+    <div class="col-xs-12">
+      <button 
+        class="btn btn-primary"
+        [disabled]="!buttonEnabled"
+        (click)=onButtonClick()>Reset</button>
+    </div>
+
+  </div>
+</div> -->
